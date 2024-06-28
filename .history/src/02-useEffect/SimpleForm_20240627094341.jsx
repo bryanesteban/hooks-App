@@ -21,11 +21,11 @@ export const SimpleForm = () => {
     }
 
     useEffect(() => {
-        // console.log('useEffect called!');
+        console.log('useEffect called!');
     },[]);
 
     useEffect(() => {
-        // console.log('useEffect called!');
+        console.log('useEffect called!');
     },[email]);
 
  
