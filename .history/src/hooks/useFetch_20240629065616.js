@@ -6,7 +6,7 @@ const localCache = {};
 
 export const useFetch = ( url ) => {
   
-
+    
 
     const [state, setstate] = useState({
         date:null,
@@ -31,24 +31,13 @@ export const useFetch = ( url ) => {
         });
     }
 
-    const getFetch = async() => {
-
-        if( localCache [url]){
-            console.log('Usando cache');
-            setstate({
-                data: localCache[url],
-                isLoading: false,
-                hasError: false,
-                error: null,
-            });
-            return;
-        }
+    const getFetch= async() => {
 
         setLoadingState();
        const resp = await fetch( url );
        
        //sleep
-       await new Promise( resolve => setTimeout(resolve, 1000));
+       await new Promise( resolve => setTimeout(resolve, 2000));
 
        if( !resp.ok){
         setstate({
@@ -72,7 +61,7 @@ export const useFetch = ( url ) => {
         error: null
        })
 
-       localCache[ url] = data;
+       console.log({data});
     }
   
     return {
