@@ -19,19 +19,7 @@ export const MultipleCustomHook = () => {
     <hr></hr>
         { isLoading 
             ?  <LoadingMessage/> 
-            : (
-              <PokemonCard 
-                id={data?.id} 
-                name={ data?.name}
-                sprites={[
-                    data.sprites.front_default,
-                    data.sprites.front_shiny,
-                    data.sprites.back_default,
-                    data.sprites.back_shiny,
-                ]}
-            />
-            )
-        }
+            : <PokemonCard id={data?.id} name={ data?.name}/>}
         {/* <pre> {JSON.stringify(data, null, 2 )} </pre> */}
         
         

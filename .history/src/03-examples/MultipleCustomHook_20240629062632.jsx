@@ -2,8 +2,6 @@
 import React from 'react'
 import { useFetch } from '../hooks/useFetch'
 import { useCounter } from '../hooks/useCounter';
-import { LoadingMessage } from './LoadingMessage';
-import { PokemonCard } from './PokemonCard';
 
 export const MultipleCustomHook = () => {
 
@@ -17,36 +15,20 @@ export const MultipleCustomHook = () => {
     <>
     <h1>Informacion de Pokemon</h1>
     <hr></hr>
-        { isLoading 
-            ?  <LoadingMessage/> 
-            : (
-              <PokemonCard 
-                id={data?.id} 
-                name={ data?.name}
-                sprites={[
-                    data.sprites.front_default,
-                    data.sprites.front_shiny,
-                    data.sprites.back_default,
-                    data.sprites.back_shiny,
-                ]}
-            />
-            )
-        }
+        { isLoading && <p>Cargando...</p>}
         {/* <pre> {JSON.stringify(data, null, 2 )} </pre> */}
-        
-        
-
+        <h2>{ data?.name }</h2>
 
 
         <button
             className="btn btn-primary mt-2"
-            onClick={() => counter > 1 ? decrement() : null }
+            onClick={decrement}
         >
             Anteriores
         </button>
         <button
             className="btn btn-primary  mt-2"  
-            onClick={() => increment()}  
+            onClick={increment}  
         >
             Siguiente
         </button>
