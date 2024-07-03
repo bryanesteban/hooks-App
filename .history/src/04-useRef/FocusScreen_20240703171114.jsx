@@ -6,7 +6,7 @@ export const FocusScreen = () => {
  
 
     const onClick = () => {
-       inputRef.current.select();
+
     }
 
     return (
@@ -15,7 +15,6 @@ export const FocusScreen = () => {
         <hr/>
 
         <input
-            ref={ inputRef }
             type="text"
             placeholder="Ingrese su nombre"
             className='form-control'
