@@ -1,21 +1,17 @@
 
 
-import React, { useLayoutEffect, useRef, useState } from 'react';
+import React, { useLayoutEffect, useRef } from 'react';
 
 export const Quote = ({ author, quote }) => {
 
-  const pRef = useRef(); //obtienes tdoa la data del objeto 
-  const [boxSize, setBoxSize] = useState({width: 0, height: 0})
-
+  const pRef = useRef();
 
   useLayoutEffect(() => {
-  const { width, height }  = pRef.current.getBoundingClientRect();
-  setBoxSize({width,height });
+    console.log(pRef.current.getBoundingClientReact());
 
   },[quote])
 
   return (
-    <>
     <blockquote
         className="blockquote text-end"
         style={{ display: 'flex' }}
@@ -25,7 +21,7 @@ export const Quote = ({ author, quote }) => {
         <footer className="blockquote-footer">{ author }</footer>
     </blockquote>
     
-    <code>{ JSON.stringify(boxSize) }</code>
-    </>
+
+
   )
 }
