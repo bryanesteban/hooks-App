@@ -8,7 +8,7 @@ export const todoReducer = (initialState = [], action) => {
         // return initialState; 
         // throw new Error( `${action.type} no esta implementada`);
       case '[TODO] Remove todo':
-        return initialState.filter(todo => todo.id !== action.payload);
+        return initialState
 
       default:
             return initialState;

@@ -1,35 +1,29 @@
 import { useState } from "react";
-import { useForm } from "../hooks/useForm";
 
 
 
-export const TodoAdd = ({onNewTodo}) => {
+export const TodoAdd = ({handleNewTodo}) => {
     
-    
-    const { description, onInputChange, onResetForm} = useForm({
-        description:''
-    });
+    const [Todo, setTodo] =useState({ id: new Date().getTime(),
+                                      description: '',
+                                      done: false});
 
-    
-    
-    const onFormSubmit = ( event ) => {
-        event.preventDefault();
-        if(description.length <= 1) return ;
+    const onInputChange = ({target}) => {
 
-        const newTodo = {
-            id: new Date().getTime(),
-            done: false,
-            description: description,
-        }
+        const {name, value} =target;
+        setTodo({
+            ...Todo,
+            [name]:value,
+        });
 
-        onNewTodo(newTodo);
-        onResetForm();
     }
+    
     
     return (
     <>
-       
-            <form onSubmit={ onFormSubmit }>
+        <h4>Agregar TODO</h4>
+            <hr/>
+            <form>
                 <input
                      type="text"
                     placeholder="¿Que hay que hacer?"

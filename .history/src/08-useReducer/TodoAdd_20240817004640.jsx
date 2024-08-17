@@ -13,8 +13,8 @@ export const TodoAdd = ({onNewTodo}) => {
     
     
     const onFormSubmit = ( event ) => {
-        event.preventDefault();
-        if(description.length <= 1) return ;
+        event.preventDefaul();
+        if(description.lenght <= 1) return ;
 
         const newTodo = {
             id: new Date().getTime(),

@@ -13,8 +13,8 @@ export const TodoAdd = ({onNewTodo}) => {
     
     
     const onFormSubmit = ( event ) => {
-        event.preventDefault();
-        if(description.length <= 1) return ;
+        event.preventDefaul();
+        if(description.lenght <= 1) return ;
 
         const newTodo = {
             id: new Date().getTime(),
@@ -23,13 +23,13 @@ export const TodoAdd = ({onNewTodo}) => {
         }
 
         onNewTodo(newTodo);
-        onResetForm();
     }
     
     return (
     <>
-       
-            <form onSubmit={ onFormSubmit }>
+        <h4>Agregar TODO</h4>
+            <hr/>
+            <form onSubmit={onFormSubmit}>
                 <input
                      type="text"
                     placeholder="¿Que hay que hacer?"

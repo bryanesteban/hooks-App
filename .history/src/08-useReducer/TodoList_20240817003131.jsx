@@ -8,7 +8,6 @@ export const TodoList = ({state = []}) => {
             {
                 state.map(todo => (
                     <TodoItem
-                        key={ todo.id }
                         todo={todo} 
                     />    
                 ))

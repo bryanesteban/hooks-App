@@ -19,11 +19,7 @@ export const TodoApp = () => {
 
     ];
 
-    const init = () => {
-        return JSON.parse(localStorage.getItem('state')) || [];
-    }
-
-    const [state, dispatch] = useReducer(todoReducer, initialState,init );
+    const [state, dispatch] = useReducer(todoReducer, initialState);
     
     useEffect(() => {
         localStorage.setItem('state', JSON.stringify( state ));
