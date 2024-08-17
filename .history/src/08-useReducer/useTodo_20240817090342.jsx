@@ -50,8 +50,7 @@ export const useTodo = () => {
 
     return ({
         state,
-        todosCount: todosCount(),
-        pendingTodosCount : pendingTodosCount(),
+        todosCount,
         handleNewTodo,
         handleDeleteTodo,
         haldleToggleTodo,

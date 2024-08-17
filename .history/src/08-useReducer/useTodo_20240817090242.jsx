@@ -40,18 +40,13 @@ export const useTodo = () => {
         return state.length;
     }
 
-    const pendingTodosCount = () => {
-        return state.filter( todo => !todo.done).length;
-    }
-
     useEffect(() => {
         localStorage.setItem('state', JSON.stringify( state ));
     },[state])
 
     return ({
         state,
-        todosCount: todosCount(),
-        pendingTodosCount : pendingTodosCount(),
+        todosCount,
         handleNewTodo,
         handleDeleteTodo,
         haldleToggleTodo,

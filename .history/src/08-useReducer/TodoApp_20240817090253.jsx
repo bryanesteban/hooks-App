@@ -8,7 +8,7 @@ export const TodoApp = () => {
 
     return (
     <>
-    <h1>TodoApp: {todosCount}, <small>pendientes: {pendingTodosCount}</small></h1>
+    <h1>TodoApp: {todosCount}, <small>pendientes: {state.filter( todo => !todo.done).length}</small></h1>
     <hr/>
 
         <div className="row">
