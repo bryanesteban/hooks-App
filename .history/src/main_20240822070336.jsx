@@ -30,11 +30,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       // <CallbackHook/>
       // <Padre/>
       // <TodoApp/>
-      <BrowserRouter>
-      
       <MainApp/>
-      
-      </BrowserRouter>
 
   // </React.StrictMode>
 )
