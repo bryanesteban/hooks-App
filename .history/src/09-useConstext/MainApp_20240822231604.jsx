@@ -2,14 +2,17 @@ import { Link, Navigate, Route, Routes } from "react-router-dom"
 import { HomePage } from "./HomePage"
 import { AboutPage } from "./AboutPage"
 import { LoginPage } from "./LoginPage"
-import { Navbar } from "./Navbar"
 
 
 export const MainApp = () => {
     return (
         <>
-           
-            <Navbar/>
+            <h1>MainApp</h1>
+            <hr/>
+            <Link to="/">Home</Link>
+            <Link to="/about">About</Link>
+            <Link to="/login">Login</Link>
+
 
             <Routes>
                 <Route path="/" element={ <HomePage/> }/>
