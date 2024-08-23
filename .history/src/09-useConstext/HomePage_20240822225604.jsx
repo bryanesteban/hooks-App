@@ -1,8 +1,8 @@
-export const LoginPage = () =>
+export const HomePage = () =>
     {
         return (
             <>
-            <h1>LoginPage</h1>
+            <h1>MainApp</h1>
             <hr/>
             </>
         )
