@@ -3,7 +3,7 @@ import { Link, NavLink } from "react-router-dom"
 export const Navbar = () => {
 
     return (
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark rounded-3">
+        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <div className="container-fluid">
           <Link className="navbar-brand" to="/">UseContext</Link>
 
@@ -21,11 +21,7 @@ export const Navbar = () => {
                     to="/about">
                     About
                 </NavLink>
-                <NavLink 
-                    className={({isActive}) => `nav-link ${ isActive  ? 'active' : ''}`}
-                    to="/login">
-                    Login
-                </NavLink>
+              
             </ul>
           </div>
         </div>
