@@ -4,7 +4,7 @@ import { UserContext } from "./context/UserContext"
 export const HomePage = () =>
     {
 
-        const { user } = useContext( UserContext);
+        const {user} = useContext( UserContext);
 
 
         return (
