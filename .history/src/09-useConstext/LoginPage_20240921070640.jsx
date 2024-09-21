@@ -4,7 +4,7 @@ import { UserContext } from "./context/UserContext";
 export const LoginPage = () =>
 {
 
-    const {user, setUser} = useContext( UserContext );
+    const {user} = useContext( UserContext );
 
 
         return (
@@ -18,7 +18,7 @@ export const LoginPage = () =>
 
             <button 
                 className="btn btn-primary"
-                onClick={() => setUser({ id:123, name:'Bryan',email:'bryan@google.com'})}
+                onClick={() => setUser()}
             >
             Establecer usuario
             </button>

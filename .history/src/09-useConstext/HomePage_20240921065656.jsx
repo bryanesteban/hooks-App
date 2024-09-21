@@ -4,18 +4,13 @@ import { UserContext } from "./context/UserContext"
 export const HomePage = () =>
     {
 
-        const {} = useContext( UserContext);
+        const {} =useContext( UserContext);
 
 
         return (
             <>
-            <h1>HomeApp</h1> <small>{user?.name}</small>
+            <h1>HomeApp</h1>
             <hr/>
-
-            <pre>
-                {JSON.stringify(user,null, 3)}
-            </pre>
-
             </>
         )
     }

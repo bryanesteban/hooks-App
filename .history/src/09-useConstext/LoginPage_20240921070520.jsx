@@ -4,8 +4,8 @@ import { UserContext } from "./context/UserContext";
 export const LoginPage = () =>
 {
 
-    const {user, setUser} = useContext( UserContext );
-
+    const {algo} = useContext(UserContext);
+    console.log(algo);
 
         return (
             <>
@@ -16,10 +16,7 @@ export const LoginPage = () =>
                 {JSON.stringify(user, null, 3)}
             </pre>
 
-            <button 
-                className="btn btn-primary"
-                onClick={() => setUser({ id:123, name:'Bryan',email:'bryan@google.com'})}
-            >
+            <button className="btn btn-primary">
             Establecer usuario
             </button>
 

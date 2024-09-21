@@ -9,13 +9,8 @@ export const HomePage = () =>
 
         return (
             <>
-            <h1>HomeApp</h1> <small>{user?.name}</small>
+            <h1>HomeApp</h1>
             <hr/>
-
-            <pre>
-                {JSON.stringify(user,null, 3)}
-            </pre>
-
             </>
         )
     }
